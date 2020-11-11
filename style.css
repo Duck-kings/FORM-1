@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #333333;
+}
+.form{
+    border: 3px solid #240861;
+    background: linear-gradient(45deg, #033563, #34014a);
+    height: 450px;
+    width: 500px;
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.form_sub{
+    margin: auto 0 25px 50px;
+    font-size: 22px;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background: linear-gradient(90deg, #1f0447, #3d0447);
+}
+.form_name, .form_email, .form_tel{
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 15px;
+    margin: 60px 0 0 35px;
+    width: 80%;
+    border-radius: 30px;
+}
+.form_name:focus, .form_email:focus, .form_tel:focus{
+    border: 5px solid #5e24c9;
+}
+.form_name:focus::placeholder, .form_email:focus::placeholder, 
+.form_tel:focus::placeholder{
+    opacity: 0;
+    transition: .3s;
+}
+.form_name:focus ~ .form_span_name, .form_email:focus ~ .form_span_email,
+.form_tel:focus ~ .form_span_tel{
+    color: #ffffff;
+    opacity: 1;
+    left: 50px;
+}
+.form span{
+    position: absolute;
+    font-size: 18px;
+    transition: .3s;
+    left: 200px;
+    opacity: 0;
+}
+.form_span_name{
+    top: 25px;
+}
+.form_span_email{
+    top: 135px;
+}
+.form_span_tel{
+    top: 245px;
+}
